@@ -21,10 +21,55 @@
             line-height: 1.7;
         }
 
+        /* Navigation */
+        nav {
+            background-color: #fff;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            padding: 12px 20px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 8px 20px;
+            list-style: none;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        nav a {
+            color: #555;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            padding: 4px 8px;
+            border-radius: 4px;
+            transition: all 0.2s;
+        }
+
+        nav a:hover {
+            color: #8b0000;
+            background-color: #f5f5f5;
+        }
+
         .container {
             max-width: 850px;
             margin: 0 auto;
             padding: 50px 20px;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Offset for sticky nav */
+        section {
+            scroll-margin-top: 60px;
         }
 
         header {
@@ -247,6 +292,21 @@
     </style>
 </head>
 <body>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#research-interests">Research Interests</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#teaching">Teaching</a></li>
+            <li><a href="#leadership">Leadership</a></li>
+            <li><a href="#skills">Skills</a></li>
+        </ul>
+    </nav>
+
     <div class="container">
         <header>
             <h1>Sukhrob Golibboev</h1>
@@ -254,7 +314,7 @@
             <img src="profile.jpg" alt="Sukhrob Golibboev" class="profile-img">
             
             <div class="contact-info">
-                Contact: <a href="mailto:gholibboev@gmail.com">gholibboev@gmail.com</a>
+                Contact: <a href="/cdn-cgi/l/email-protection#84e3ecebe8ede6e6ebe1f2c4e3e9e5ede8aae7ebe9"><span class="__cf_email__" data-cfemail="afc8c7c0c3c6cdcdc0cad9efc8c2cec6c381ccc0c2">[email&#160;protected]</span></a>
             </div>
 
             <div class="social-links">
@@ -273,24 +333,24 @@
             </div>
         </header>
 
-        <section>
+        <section id="about">
             <h2>About Me</h2>
             <p class="about-text">
-                Hi, I am Sukhrob, a software engineer and aspiring researcher based in Mountain View, CA. I am currently pursuing Stanford's AI Graduate Certificate while working as an AI Expert Advisor for Uzbekistan's Ministry of Employment, building voice-based AI systems to serve 35 million citizens.
+                Hi, I am Sukhrob, a software engineer and aspiring computational mathematics researcher based in Mountain View, CA. I am currently pursuing Stanford's AI Graduate Certificate while working as an AI Expert Advisor for Uzbekistan's Ministry of Employment, building voice-based AI systems to serve 35 million citizens.
             </p>
             <p class="about-text">
                 Previously, I spent five years at Microsoft architecting enterprise data platforms processing 15+ billion records monthly and $3B in payment flows. My research interests lie at the intersection of large-scale optimization and machine learning, particularly convergence guarantees under distribution shift and structure-exploiting algorithms.
             </p>
         </section>
 
-        <section>
+        <section id="research-interests">
             <h2>Research Interests</h2>
             <p class="research-interests">
                 Large-scale optimization for machine learning; convex reformulations of neural networks; convergence guarantees under distribution shift; structure-exploiting algorithms (convex relaxations, first-order methods, IO-aware linear algebra)
             </p>
         </section>
 
-        <section>
+        <section id="education">
             <h2>Education</h2>
             
             <div class="entry">
@@ -336,7 +396,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="research">
             <h2>Research Experience</h2>
             
             <div class="entry">
@@ -374,7 +434,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="publications">
             <h2>Publications</h2>
             
             <div class="publication">
@@ -388,7 +448,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="experience">
             <h2>Professional Experience</h2>
             
             <div class="entry">
@@ -439,7 +499,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="awards">
             <h2>Awards &amp; Honors</h2>
             
             <div class="award-item">
@@ -469,7 +529,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="teaching">
             <h2>Teaching Experience</h2>
             
             <div class="entry">
@@ -501,7 +561,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="leadership">
             <h2>Leadership &amp; Service</h2>
             
             <div class="entry">
@@ -519,7 +579,7 @@
             </div>
         </section>
 
-        <section>
+        <section id="skills">
             <h2>Skills</h2>
             <div class="skills-grid">
                 <div class="skill-row"><span class="skill-category">Programming:</span> Python, Scala, SQL, C#, JavaScript, C++, Java</div>
@@ -529,10 +589,3 @@
                 <div class="skill-row"><span class="skill-category">Languages:</span> English (Fluent), Uzbek (Native), Turkish (Fluent), Russian (Conversational)</div>
             </div>
         </section>
-
-        <footer>
-            <p>&copy; 2026 Sukhrob Golibboev. All rights reserved.</p>
-        </footer>
-    </div>
-</body>
-</html>
